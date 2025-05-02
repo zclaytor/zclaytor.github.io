@@ -10,35 +10,27 @@
             margin: 0;
             padding: 0;
         }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
+        #content {
+            padding: 20px;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('nav').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="research.html">Research</a>
-        <a href="software.html">Software</a>
-        <a href="data.html">Data</a>
-        <a href="publications.html">Publications</a>
-        <a href="cv.html">CV</a>
-    </nav>
-    <h1>About Me</h1>
-    <p>Welcome to the About Me page. Here you can learn more about me.</p>
+    <nav></nav>
+    <div id="content">
+        <h1>About Me</h1>
+        <p>Originally from Chillicothe, Ohio, I graduated from Zane Trace High School in 2012. I obtained my Bachelor of Arts in Astrophysics with a minor in Religion from Ohio Wesleyan University in 2016. In 2022 I obtained my PhD in Astronomy from the University of Hawaii Institute for Astronomy.</p> 
+        <p>These days I love going hiking, bowling, playing softball, eating good food, and making good coffee.</p>
+    </div>
 </body>
 </html>

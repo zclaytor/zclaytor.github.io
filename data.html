@@ -26,19 +26,69 @@
             background-color: #ddd;
             color: black;
         }
+        nav .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        nav .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 46px;
+        }
+
+        nav .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        nav .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #content {
+            padding: 20px;
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('nav').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="research.html">Research</a>
-        <a href="software.html">Software</a>
-        <a href="data.html">Data</a>
-        <a href="publications.html">Publications</a>
-        <a href="cv.html">CV</a>
-    </nav>
-    <h1>Data</h1>
-    <p>Welcome to the Data page. Here you can find datasets and related information.</p>
+    <nav></nav>
+    <div id="content">
+        <h1>Data</h1>
+        <p>Welcome to the Data page. Here you can find datasets and related resources.</p>
+    </div>
 </body>
 </html>

@@ -10,35 +10,26 @@
             margin: 0;
             padding: 0;
         }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
+        #content {
+            padding: 20px;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('nav').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="research.html">Research</a>
-        <a href="software.html">Software</a>
-        <a href="data.html">Data</a>
-        <a href="publications.html">Publications</a>
-        <a href="cv.html">CV</a>
-    </nav>
-    <h1>Software</h1>
-    <p>Welcome to the Software page. Here you can find information about the software I have developed.</p>
+    <nav></nav>
+    <div id="content">
+        <h1>Software</h1>
+        <p>Welcome to the Software page. Here you can find information about the software I have developed.</p>
+    </div>
 </body>
 </html>

@@ -4,16 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        #content {
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="site.css">
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             fetch('navbar.html')
@@ -26,11 +17,72 @@
     </script>
 </head>
 <body>
+    <header class="site-header"><div class="header-inner"><div class="brand-line"><p class="brand">zach's space<span class="brand-dot">.</span></p></div><p class="status-line"><span class="status-dot"></span> studying stars, writing code, drinking coffee</p></div></header>
     <nav></nav>
     <div id="content">
         <h1>About Me</h1>
-        <p>Originally from Chillicothe, Ohio, I graduated from Zane Trace High School in 2012. I obtained my Bachelor of Arts in Astrophysics with a minor in Religion from Ohio Wesleyan University in 2016. In 2022 I obtained my PhD in Astronomy from the University of Hawaiʻi Institute for Astronomy.</p> 
-        <p>These days I love going hiking, bowling, playing softball, eating good food, and making good coffee.</p>
+        <p class="page-intro cv-intro">I’m an astronomical data scientist whose work combines stellar astrophysics, machine learning, and the tools researchers use to explore space-based survey data.</p>
+
+        <section class="cv-section" aria-labelledby="stsci-heading">
+            <h2 id="stsci-heading">Science &amp; Functional Work at STScI</h2>
+            <p>My STScI work connects the science coming from space-based surveys with the archive systems researchers use to access it. On the functional side, I coordinate MAST operations for the Roman Space Telescope, contribute to data ingest, and guide products including the Light Curve Similarity Search and Hello Universe. On the science side, I develop methods for extracting stellar rotation and activity from large photometric datasets, using machine learning and light-curve analysis to study stellar ages and evolution. This builds on my Kepler and TESS research and supports the science potential of the upcoming Roman Galactic Bulge Time Domain Survey.</p>
+        </section>
+
+        <section class="cv-section" aria-labelledby="interests-heading">
+            <h2 id="interests-heading">Outside Work</h2>
+            <p>Originally from Chillicothe, Ohio, I enjoy hiking, bowling, reading, playing softball, eating good food, and making good coffee.</p>
+        </section>
+
+        <section class="cv-section" aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
+            <article class="cv-entry">
+                <h3>Ph.D. in Astronomy <span class="cv-date">August 2022</span></h3>
+                <p>University of Hawaiʻi at Mānoa - Honolulu, Hawaiʻi</p>
+                <p><strong>Dissertation:</strong> <em>Rotational Characterization of TESS Stars with Deep Learning</em><br><strong>Advisor:</strong> Professor Jennifer van Saders</p>
+            </article>
+            <article class="cv-entry">
+                <h3>M.S. in Astronomy <span class="cv-date">December 2018</span></h3>
+                <p>University of Hawaiʻi at Mānoa - Honolulu, Hawaiʻi</p>
+            </article>
+            <article class="cv-entry">
+                <h3><span class="cv-degree-title">B.A. in Astrophysics <small>| minor in Religion</small></span><span class="cv-date">May 2016</span></h3>
+                <p>Ohio Wesleyan University - Delaware, Ohio</p>
+                <p><strong>Thesis:</strong> <em>Surface Features on Pluto</em><br><strong>Advisor:</strong> Professor Robert Harmon</p>
+            </article>
+            <article class="cv-entry">
+                <h3>Zane Trace High School <span class="cv-date">May 2012</span></h3>
+                <p>Chillicothe, Ohio</p>
+            </article>
+        </section>
+
+        <section class="cv-section" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Professional Experience</h2>
+            <article class="cv-entry">
+                <h3>Staff Astronomical Data Scientist <span class="cv-date">April 2024–present</span></h3>
+                <p>Space Telescope Science Institute</p>
+                <ul>
+                    <li>Coordinate Roman operations for the Mikulski Archive for Space Telescopes (MAST).</li>
+                    <li>Product owner for the Light Curve Similarity Search and Hello Universe.</li>
+                </ul>
+            </article>
+            <article class="cv-entry">
+                <h3>Postdoctoral Associate <span class="cv-date">October 2022–April 2024</span></h3>
+                <p>University of Florida</p>
+                <ul>
+                    <li>Studied stellar rotation and activity using machine learning.</li>
+                    <li>Developed and maintained open-source astronomy software.</li>
+                </ul>
+            </article>
+            <article class="cv-entry">
+                <h3>Graduate Research Assistant <span class="cv-date">August 2016–August 2022</span></h3>
+                <p>University of Hawaiʻi</p>
+                <ul>
+                    <li>Designed neural networks to detect stellar rotation in light curves.</li>
+                    <li>Built a Python interpolator for rotating stellar model grids.</li>
+                </ul>
+            </article>
+        </section>
     </div>
+    <script src="site.js" defer></script>
 </body>
 </html>

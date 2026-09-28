@@ -1,0 +1,122 @@
+[
+  {
+    "year": 2026,
+    "bibcode": "2026MNRAS.550g1237M",
+    "title": "Quantifying isochrone-based age uncertainties for rapidly rotating A-type stars",
+    "authors": ["Murphy, Simon J.", "Gautam, Anuj", "Claytor, Zachary R."],
+    "etAl": false,
+    "abstract": "Investigates age and mass uncertainties from isochrone fitting for rapidly rotating A-type stars, where conventional stellar age indicators are often ineffective."
+  },
+  {
+    "year": 2026,
+    "bibcode": "2026ApJS..282...10S",
+    "title": "200,000+ Deep Learning-inferred Periods of Stellar Variability from the All-Sky Automated Survey for Supernovae",
+    "authors": ["Schochet, Meir E.", "Planet, Penelope", "Claytor, Zachary R."],
+    "etAl": true,
+    "abstract": "Uses deep learning to measure variability periods in a large sample of ASAS-SN stars, enabling population-scale studies of stellar rotation and evolution."
+  },
+  {
+    "year": 2025,
+    "bibcode": "2025ApJ...987....8C",
+    "title": "New Rotation Periods from the Kepler Bonus Background Light Curves",
+    "authors": ["Claytor, Zachary R.", "Tayar, Jamie"],
+    "etAl": false,
+    "abstract": "Applies a convolutional neural network to deblended Kepler Bonus light curves, measuring rotation periods for over 32,000 sources, including thousands of new periods."
+  },
+  {
+    "year": 2025,
+    "bibcode": "2025ApJ...986..229M",
+    "title": "Model Choice Matters for Age Inference on the Red Giant Branch",
+    "authors": ["Morales, Leslie M.", "Tayar, Jamie", "Claytor, Zachary R."],
+    "etAl": true,
+    "abstract": "Examines how stellar model selection affects red-giant age estimates, showing that model-systematic uncertainties remain important even as observational precision improves."
+  },
+  {
+    "year": 2025,
+    "bibcode": "2025ApJ...982..114M",
+    "title": "Magnetic Activity Evolution of Solar-like Stars. II. Sph-Ro Evolution of Kepler Main-sequence Targets",
+    "authors": ["Mathur, Savita", "Santos, Ângela R. G.", "Claytor, Zachary R."],
+    "etAl": true,
+    "abstract": "Combines Kepler measurements of stellar rotation and magnetic activity with interior models to investigate how activity evolves with Rossby number in main-sequence stars."
+  },
+  {
+    "year": 2024,
+    "bibcode": "2024ApJ...962...47C",
+    "title": "TESS Stellar Rotation up to 80 Days in the Southern Continuous Viewing Zone",
+    "authors": ["Claytor, Zachary R.", "van Saders, Jennifer L.", "Cao, Lyra"],
+    "etAl": true,
+    "abstract": "Measures long stellar rotation periods from TESS observations in the Southern Continuous Viewing Zone, extending rotation studies to periods as long as 80 days."
+  },
+  {
+    "year": 2023,
+    "bibcode": "2023RNAAS...7..273T",
+    "title": "The Importance of Neural Network Hyperparameters in Determining Age Inference Quality",
+    "authors": ["Tayar, Jamie", "Claytor, Zachary R.", "Fox, Quentin"],
+    "etAl": true,
+    "abstract": "Reports a study of how neural-network hyperparameter choices affect machine-learning estimates of stellar ages from a limited set of well-characterized stars."
+  },
+  {
+    "year": 2023,
+    "bibcode": "2023ApJ...952..131M",
+    "title": "Magnetic Activity Evolution of Solar-like Stars. I. Sph-Age Relation Derived from Kepler Observations",
+    "authors": ["Mathur, Savita", "Claytor, Zachary R.", "Santos, Ângela R. G."],
+    "etAl": true,
+    "abstract": "Uses Kepler observations to derive the relationship between photometric magnetic activity and age for solar-like stars."
+  },
+  {
+    "year": 2023,
+    "bibcode": "2023MNRAS.520.5283G",
+    "title": "The TIME Table: rotation and ages of cool exoplanet host stars",
+    "authors": ["Gaidos, Eric", "Claytor, Zachary", "Dungee, Ryan"],
+    "etAl": true,
+    "abstract": "Presents rotation periods and gyrochronological ages for cool exoplanet-host stars, supporting age estimates for planet populations around M dwarfs."
+  },
+  {
+    "year": 2022,
+    "bibcode": "2022ApJ...927..219C",
+    "title": "Recovery of TESS Stellar Rotation Periods Using Deep Learning",
+    "authors": ["Claytor, Zachary R.", "van Saders, Jennifer L.", "Llama, Joe"],
+    "etAl": true,
+    "abstract": "Trains a convolutional neural network on realistic simulated light curves and applies it to TESS observations to recover stellar rotation periods."
+  },
+  {
+    "year": 2022,
+    "bibcode": "2022ApJ...927...31T",
+    "title": "A Guide to Realistic Uncertainties on the Fundamental Properties of Solar-type Exoplanet Host Stars",
+    "authors": ["Tayar, Jamie", "Claytor, Zachary R.", "Huber, Daniel"],
+    "etAl": true,
+    "abstract": "Discusses realistic uncertainties in fundamental stellar parameters for solar-type exoplanet hosts, important for interpreting exoplanet properties and demographics."
+  },
+  {
+    "year": 2021,
+    "bibcode": "2021ApJ...916L..11Z",
+    "title": "The Second Discovery from the COCONUTS Program: A Cold Wide-orbit Exoplanet around a Young Field M Dwarf at 10.9 pc",
+    "authors": ["Zhang, Zhoujian", "Liu, Michael C.", "Claytor, Zachary R."],
+    "etAl": true,
+    "abstract": "Reports COCONUTS-2, a cold brown-dwarf companion on a wide orbit around a nearby young M dwarf, identified through common motion and parallax."
+  },
+  {
+    "year": 2020,
+    "bibcode": "2020ApJ...888...43C",
+    "title": "Chemical Evolution in the Milky Way: Rotation-based Ages for APOGEE-Kepler Cool Dwarf Stars",
+    "authors": ["Claytor, Zachary R.", "van Saders, Jennifer L.", "Santos, Ângela R. G."],
+    "etAl": true,
+    "abstract": "Uses stellar angular-momentum evolution models to estimate ages for about 500 cool dwarfs and compare their age distributions with Galactic chemical-evolution trends."
+  },
+  {
+    "year": 2023,
+    "bibcode": "2023ascl.soft06030C",
+    "title": "Butterpy: Stellar butterfly diagram and rotational light curve simulator",
+    "authors": ["Claytor, Zachary R.", "Lucas, Miles", "Llama, Joe"],
+    "etAl": false,
+    "abstract": "Describes butterpy, a software package for simulating starspot emergence and evolution, stellar butterfly diagrams, and rotational light curves."
+  },
+  {
+    "year": 2020,
+    "bibcode": "2020ascl.soft11027C",
+    "title": "kiauhoku: Stellar model grid interpolation",
+    "authors": ["Claytor, Zachary R.", "van Saders, Jennifer L.", "Santos, Ângela R. G."],
+    "etAl": true,
+    "abstract": "Describes kiauhoku, a tool for manipulating and interpolating stellar evolutionary model grids, including YREC, MIST, Dartmouth, and GARSTEC."
+  }
+]

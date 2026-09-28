@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    color-scheme: light;
+    --ink: #173452;
+    --blue: #1768a8;
+    --deep-blue: #123d69;
+    --sky: #b9e4f7;
+    --line: #9dc8df;
+    --paper: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--ink);
+    font-family: 'DM Sans', Arial, sans-serif;
+    background-color: #dceefa;
+    background-image: radial-gradient(#a6cde3 1px, transparent 1px), linear-gradient(135deg, #e9f7ff, #cfe6f4 55%, #e4f3fc);
+    background-size: 18px 18px, auto;
+}
+
+.site-header {
+    padding: 24px max(22px, calc((100vw - 980px) / 2));
+    color: white;
+    background: linear-gradient(115deg, #0f3865, #126fa9 62%, #23a6c5);
+    border-bottom: 5px solid #8ed8ec;
+    box-shadow: 0 3px 0 rgba(10, 52, 90, .16);
+}
+
+.header-inner { max-width: 980px; margin: auto; }
+.brand-line { display: flex; align-items: baseline; gap: 13px; flex-wrap: wrap; }
+.brand { margin: 0; color: white; font-size: clamp(2rem, 5vw, 3.35rem); font-weight: 800; letter-spacing: -2px; line-height: 1; text-shadow: 2px 3px 0 #0a3157; }
+.brand .brand-dot { color: #8eeaff; }
+.status-line { display: flex; align-items: center; gap: 8px; margin: 13px 0 0; color: #e1f5ff; font-size: .9rem; }
+.status-dot { width: 9px; height: 9px; display: inline-block; border-radius: 50%; background: #85f1bb; box-shadow: 0 0 0 3px rgba(133, 241, 187, .2); }
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    overflow: visible;
+    min-height: 47px;
+    padding: 5px max(12px, calc((100vw - 980px) / 2));
+    background: #f7fcff;
+    border-bottom: 1px solid #a8cfe3;
+    box-shadow: 0 2px 5px rgba(16, 59, 94, .11);
+    position: relative;
+    z-index: 5;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 12px;
+    color: #155f98;
+    font-size: .88rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 3px;
+}
+nav a:hover, nav a:focus-visible { color: white; background: #197caf; text-decoration: none; outline: none; }
+.social-links { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+nav .social-link { display: inline-grid; width: 34px; height: 34px; place-items: center; padding: 6px; border: 1px solid transparent; }
+nav .social-link:hover, nav .social-link:focus-visible { background: #e5f5fc; border-color: #b4d7e8; }
+.social-link img { display: block; width: 21px; height: 21px; object-fit: contain; }
+.scix-social-link img { padding: 2px; background: #102538; border-radius: 50%; }
+nav .dropdown { position: relative; float: none; overflow: visible; }
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0;
+    min-width: 190px;
+    padding: 5px;
+    background: white;
+    border: 1px solid var(--line);
+    box-shadow: 0 6px 15px rgba(16, 59, 94, .17);
+}
+nav .dropdown-content a { display: block; border-radius: 2px; }
+nav .dropdown:hover .dropdown-content, nav .dropdown:focus-within .dropdown-content, nav .dropdown.is-open .dropdown-content { display: block; }
+
+#content {
+    width: min(980px, calc(100% - 32px));
+    min-height: 340px;
+    margin: 22px auto 44px;
+    padding: 20px;
+    background: rgba(255, 255, 255, .96);
+    border: 1px solid #a4cce0;
+    box-shadow: 0 5px 18px rgba(29, 78, 111, .14);
+}
+
+#content:not(.home-layout) {
+    position: relative;
+    min-height: 430px;
+    padding-left: 300px;
+}
+#content:not(.home-layout)::before {
+    content: "ZACH CLAYTOR\A\A Stellar astrophysics\A Data science\A\A Based in Baltimore, MD";
+    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 220px;
+    height: 310px;
+    padding: 176px 13px 14px;
+    color: #536f81;
+    font-size: .8rem;
+    font-weight: 600;
+    line-height: 1.55;
+    white-space: pre-line;
+    background: linear-gradient(#2879a9, #2879a9) top / 100% 31px no-repeat, #fff;
+    border: 1px solid #a7ccdf;
+    box-shadow: inset 0 31px #fff;
+}
+#content:not(.home-layout)::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 62px;
+    left: 32px;
+    width: 196px;
+    height: 122px;
+    background: url("assets/images/headshot.jpg") center 28% / cover no-repeat;
+    border: 3px solid white;
+    outline: 1px solid #95bfd5;
+}
+
+#content h1, .section-title {
+    margin: 0 0 16px;
+    padding: 9px 13px;
+    color: white;
+    font-size: 1.12rem;
+    letter-spacing: .025em;
+    background: linear-gradient(90deg, #17659d, #268fc0);
+    border-left: 5px solid #8fe3f0;
+}
+#content h2 { margin: 22px 0 9px; color: #155f98; font-size: 1.15rem; }
+#content p { line-height: 1.72; }
+a { color: #087bb7; }
+a:hover { color: #c04b81; }
+
+/* Profile modules bring the old-school two-column profile layout to every section. */
+.page-layout { display: grid; grid-template-columns: 235px minmax(0, 1fr); gap: 18px; align-items: start; }
+.profile-sidebar { display: grid; gap: 12px; }
+.profile-box, .content-box { border: 1px solid #a7ccdf; background: #fff; }
+.profile-box h2, .content-box h2 { margin: 0; padding: 7px 9px; color: white; font-size: .88rem; background: linear-gradient(90deg, #2879a9, #5aaac7); }
+#content .profile-box h2, #content .content-box h2 { margin: 0; padding: 7px 9px; color: white; font-size: .88rem; background: linear-gradient(90deg, #2879a9, #5aaac7); }
+.profile-box-body, .content-box-body { padding: 12px; }
+.profile-avatar {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 1 / .74;
+    place-items: center;
+    color: #e6f8ff;
+    font: 800 3.3rem 'Space Mono', monospace;
+    letter-spacing: -.15em;
+    text-indent: -.15em;
+    background: radial-gradient(circle at 65% 25%, #83d0dc 0 4%, transparent 4.5%), radial-gradient(circle at 35% 68%, #f2c97b 0 3%, transparent 3.5%), linear-gradient(145deg, #153d68, #2989ad 58%, #95d9dc);
+    border: 3px solid white;
+    outline: 1px solid #95bfd5;
+    text-shadow: 2px 2px 0 #123d69;
+}
+.profile-name { margin: 10px 0 3px; color: #145d91; font-weight: 800; }
+.profile-tagline { margin: 0; color: #526e80; font-size: .82rem; }
+.profile-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin: 10px 0 0; font-size: .76rem; }
+.profile-facts span { padding: 6px; background: #edf8fd; border: 1px solid #d0e8f2; }
+.profile-links { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.profile-links a { font-weight: 700; font-size: .84rem; }
+.profile-main { min-width: 0; }
+.profile-main > :first-child { margin-top: 0; }
+
+.home-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 18px; align-items: start; }
+#content.home-layout { display: grid; }
+.home-layout .profile-sidebar { display: flex; flex-direction: column; }
+.home-layout .profile-sidebar { gap: 12px; }
+#content .profile-box h2 { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.profile-avatar { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 24%; letter-spacing: normal; text-indent: 0; }
+.profile-name { font-size: 1.02rem; }
+.profile-tagline { margin-bottom: 12px; }
+.profile-links { padding-top: 10px; border-top: 1px dotted #a7ccdf; }
+.interest-list, .detail-list { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 7px 9px; margin: 0; font-size: .78rem; line-height: 1.45; }
+.interest-list dt, .detail-list dt { color: #155f98; font-weight: 800; }
+.interest-list dd, .detail-list dd { margin: 0; }
+.home-main { min-width: 0; }
+.home-section { margin: 0 0 13px; border: 1px solid #a7ccdf; background: #fff; }
+#content .home-section > h2 { margin: 0; padding: 7px 10px; color: white; font-size: .9rem; font-weight: 700; background: linear-gradient(90deg, #2879a9, #5aaac7); }
+.home-section-body { padding: 10px 12px; font-size: .88rem; }
+.home-section-body p { margin: 6px 0 10px; line-height: 1.55 !important; }
+.home-section-body h3 { margin: 2px 0 5px; color: #155f98; font-size: .9rem; }
+.home-section-body h3:not(:first-child) { margin-top: 15px; }
+.home-section-body p:last-child { margin-bottom: 0; }
+.interest-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.interest-tags span { padding: 4px 7px; color: #1b6592; font-size: .74rem; font-weight: 700; background: #edf8fd; border: 1px solid #c8e2ef; }
+.project-links p { padding-bottom: 7px; border-bottom: 1px dotted #c6dce7; }
+.project-links p:last-child { padding-bottom: 0; border-bottom: 0; }
+.site-footer { max-width: 980px; margin: -26px auto 24px; color: #63829a; text-align: center; font-size: .76rem; }
+.page-intro, .cv-intro { margin: 0 0 16px; padding: 11px 13px; color: #315b76; line-height: 1.65; background: #e8f6fc; border: 1px solid #c0deeb; border-left: 4px solid #45a6cc; }
+.home-welcome { margin-bottom: 13px; }
+#content .home-welcome h1 { margin: 0 0 5px; padding: 0; color: #155f98; font-size: 1.15rem; background: none; border: 0; }
+.home-welcome p { margin: 0; line-height: 1.55 !important; }
+.publication-intro { margin-bottom: 7px; }
+.publication-source { margin: 0 0 18px; font-size: .88rem; font-weight: 700; }
+.publication-list { display: grid; gap: 12px; }
+.publication-loading, .publication-error { padding: 14px; color: #536f81; background: #edf8fd; border: 1px solid #c8e2ef; }
+.publication-card { padding: 15px 16px; background: #fff; border: 1px solid #a7ccdf; box-shadow: 0 2px 7px rgba(29, 78, 111, .08); }
+.publication-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+#content .publication-card h2 { margin: 0 0 7px; color: #155f98; font-size: 1.08rem; line-height: 1.4; }
+.publication-card h2 a { color: inherit; text-decoration: none; }
+.publication-card h2 a:hover { color: #c04b81; text-decoration: underline; }
+.publication-year { flex: 0 0 auto; padding: 3px 7px; color: #286b8c; font: 700 .75rem 'Space Mono', monospace; background: #edf8fd; border: 1px solid #c8e2ef; }
+.publication-authors { margin: 0 0 9px; color: #5c7180; font-size: .83rem; }
+.publication-abstract { margin: 0; font-size: .9rem; line-height: 1.6 !important; }
+.publication-card.is-software { border-left: 4px solid #5aaac7; }
+.cv-section { margin: 18px 0 24px; }
+#content .cv-section > h2 { margin: 0 0 12px; padding-bottom: 7px; color: #155f98; font-size: 1.08rem; border-bottom: 2px solid #b9d9e8; }
+.cv-entry { margin: 0 0 14px; padding: 0 0 12px 12px; border-bottom: 1px dotted #c6dce7; border-left: 3px solid #d0e8f2; }
+#content .cv-entry h3 { display: flex; justify-content: space-between; gap: 12px; margin: 0 0 4px; color: #264d69; font-size: .94rem; }
+.cv-entry h3 > .cv-date { flex: 0 0 auto; color: #64829a; font-size: .8rem; font-weight: 600; }
+.cv-degree-title { color: inherit; font: inherit; }
+.cv-degree-title small { color: #64829a; font-size: .8rem; font-weight: 500; }
+.cv-entry p { margin: 4px 0 7px; font-size: .88rem; line-height: 1.55 !important; }
+.cv-entry ul { margin: 6px 0 2px; padding-left: 20px; font-size: .87rem; line-height: 1.55; }
+.cv-entry li + li { margin-top: 3px; }
+.cv-note { color: #63829a; font-size: .78rem !important; font-style: italic; }
+.software-links { display: flex; flex-wrap: wrap; gap: 9px; }
+.software-links a { display: inline-flex; align-items: center; gap: 7px; padding: 7px 10px; color: #155f98; font-size: .86rem; font-weight: 700; text-decoration: none; background: #edf8fd; border: 1px solid #b7d7e7; }
+.software-links a:hover { color: #0f4d79; background: #dff2fa; border-color: #6ba9c6; }
+.resource-icon { width: 18px; height: 18px; flex: 0 0 auto; object-fit: contain; }
+.scix-icon-wrap { display: inline-grid; width: 20px; height: 20px; flex: 0 0 auto; place-items: center; overflow: hidden; background: #102538; border-radius: 50%; }
+.scix-icon { width: 17px; height: 17px; }
+
+@media (max-width: 760px) {
+    .site-header { padding: 20px 18px; }
+    nav { justify-content: flex-start; padding: 5px 10px; }
+    nav a { padding: 8px 9px; }
+    .social-links { margin-left: 0; }
+    #content { width: calc(100% - 20px); margin: 12px auto 32px; padding: 12px; }
+    .page-layout, .home-layout { grid-template-columns: 1fr; }
+    #content:not(.home-layout) { min-height: 0; padding-left: 12px; padding-top: 12px; }
+    #content:not(.home-layout)::before { position: relative; top: auto; left: auto; display: block; width: 100%; height: 230px; margin-bottom: 14px; padding-top: 130px; content: "ZACH CLAYTOR\A Stellar astrophysicist\A Based in Baltimore, MD"; }
+    #content:not(.home-layout)::after { top: 54px; left: 24px; width: calc(100% - 48px); height: 72px; }
+    .home-layout .profile-sidebar { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
+    .home-layout .profile-box:first-child { grid-column: 1 / -1; }
+    .home-layout { gap: 12px; }
+    .profile-sidebar { grid-template-columns: 1fr 1fr; align-items: start; }
+    .profile-box:first-child { grid-row: auto; }
+    .profile-avatar { aspect-ratio: 1 / .85; }
+}
+@media (max-width: 390px) {
+    .profile-sidebar, .home-layout .profile-sidebar { grid-template-columns: 1fr; }
+    .home-layout .profile-box:first-child { grid-column: auto; }
+}
